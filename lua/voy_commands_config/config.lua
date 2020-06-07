@@ -76,4 +76,23 @@ ADVERT_CONFIG.configlist = {
 
 		end
 	},
+	['/looc'] = -- The chat message.
+	{
+		prefix = "[LOOC]", -- The Prefix.
+		pcolor = Color(255, 255, 255), -- Color of the Prefix
+		ncolor = nil, -- Color of the players name, nil will default to the teams name.
+		tcolor = Color(255,255,255), -- Color of the Text.
+		Cost = 0, -- Cost to send the message
+		Sound = Sound("common/talk.wav"), -- Sound whenever this command is recieved by Clients.
+
+		Global = false, -- Should it be global or only sent to those in the area of the player?
+		Radius = 250, -- How far should the message travel if the Command is radial?
+
+		ReceiveJobs = {}, -- Teams that will receive the Message, leave empty to allow everyone to receive the message.
+		SendJobs = {}, -- Teams that can send the Message, leave empty to allow everyone to send this message.
+
+		SendMessageFunction = function(sender, receivers, message)
+
+		end
+	},
 }
